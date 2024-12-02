@@ -6,22 +6,30 @@ This project will be a reworking of Shuttle-UM's Subleave, which allows driving 
 1. Data Storage using MongoDB
     - DrivingShifts: A collection should store all available shifts (driving and dispatch)
         * Example Shifts:
+        
         {"Date": "12/02/2024", "Shift-ID" : "12-02-24-77", "Route" : "STY", "Package": "FT-43", "Time_Start": "19:45", "Time_End": "20:50", "Start_Location": "Base", "End_Location": "Base", "Driver": null}
 
         {"Date": "12/06/2024", "Shift-ID" : "12-06-24-306", "Route" : "105-5", "Package": "SF-06", "Time_Start": "10:58", "Time_End": "12:48", "Start_Location": "Regents", "End_Location": "Regents", "Driver": "Z02"}
 
-    - Drivers: A collection to store all drivers and their information:
-        {"Name" : "Kevin Cheng", "Driver_Number" : "Z02", "email" : "myEmail@gmail.com"}
+        {"Date": "12/02/2024", "Shift-ID" : "12-02-24-501", "Route" : "DSP-H", "Package": "DSP-H", "Time_Start": "16:30", "Time_End": "19:30", "Start_Location": "Base", "End_Location": "Base", "Driver": "D12"}
 
-2. Form 2: Drivers should be able to fill out a form to select available shifts.
+        {"Date": "12/02/2024", "Shift-ID" : "12-02-24-412", "Route" : "DR-3B", "Package": "PB-12", "Time_Start": "13:30", "Time_End": "17:30", "Start_Location": "Base", "End_Location": "Base", "Driver": "P24"}
+      
+
+    - Drivers: A collection to store all drivers and their information:
+
+       {"Name" : "Kevin Cheng", "Driver_Number" : "Z02", "email" : "myEmail@gmail.com"}
+
+1. Form 2: Drivers should be able to fill out a form to select available shifts.
     - The form should allow all driving staff to select available driving shifts. (Shifts in DrivingShifts with Driver set to null)
     - The form should only allow ** dispatch-trained ** staff to select dispatching shifts.
 
-3. Form 2 Processing:
+2. Form 2 Processing:
     - DrivingShifts will be updated accordingly. A confirmation email will be sent to the driver.
-    (CONTACT NELSON FIRST TO SEE IF EMAIL API IS OK FOR GRADING REQUIREMENT)
 
-4. Forms 3 & 4: Add/Delete Driver from Drivers Collection
+3. Forms 3 & 4: Add/Delete Driver from Drivers Collection
+4. Forms 5 & 6: Add/Delete Shifts
+5. Form 7: Add Shifts from CSV
 
 
 # Full Functionality (IGNORE THIS FOR NOW! :P)
@@ -59,4 +67,6 @@ This project will be a reworking of Shuttle-UM's Subleave, which allows driving 
 6. Form 2 Processing:
     - DrivingShifts will be updated accordingly.
 7. Forms 3 & 4: Add/Delete Driver from Drivers Collection
-8. There are loads more, like manager overrides, dispatcher overrides, etc. 
+8. Forms 5 & 6: Add/Delete Shifts
+9. Form 7: Add Shifts from CSV
+10. There are loads more, like manager overrides, dispatcher overrides, etc. 
