@@ -14,9 +14,9 @@ const pass = process.env.MONGO_DB_PASSWORD;
 const db = process.env.MONGO_DB_NAME;
 const shiftsCollection = process.env.MONGO_COLLECTION_SHIFTS;
 const driversCollection = process.env.MONGO_COLLECTION_DRIVERS;
-const uri = `mongodb+srv://${user}:${pass}@cluster0.udh2fxs.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0`;
+const uri = `mongodb+srv://${user}:${pass}@cluster0.udh2fxs.mongodb.net/${db}?retryWrites=true&w=majority&appName=Cluster0`;
 const { MongoClient, ServerApiVersion, ObjectId } = require('mongodb');
-const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true, serverApi: ServerApiVersion.v1 });
+const client = new MongoClient(uri, {serverApi: ServerApiVersion.v1 });
 
 const mailTransporter = nodemailer.createTransport({
     service: "gmail",
