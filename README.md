@@ -31,9 +31,8 @@ For CMSC335, this application will be implemented in a limited functionality as 
 2. Form 2 Processing:
     - DrivingShifts will be updated accordingly. A confirmation email will be sent to the driver.
 
-3. Forms 3 & 4: Add/Delete Driver from Drivers Collection
-4. Forms 5 & 6: Add/Delete Shifts
-5. Form 7: Add Shifts from CSV
+3. Form 3: Add Driver to Drivers Collection
+4. Form 5: Add Shifts to Shifts Collection
 
 
 # Full Functionality (IGNORE THIS FOR NOW! :P)
