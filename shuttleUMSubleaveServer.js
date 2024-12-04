@@ -87,7 +87,7 @@ app.get("/subsheetForm", async (req,res) => {
                 let durationInMinutes = (endHours * 60  + endMinutes) - (startHours * 60  + startMinutes);
                 durationInMinutes += (durationInMinutes < 0) ? (24*60) : 0; //Deal with the case where end time is on the next day.
             
-                toReturn += `<label for="${ele["_id"]}"><input type="checkbox" id="holesSelected" name="holesSelected" value="${ele["_id"]}">${daysOfWeek[date.getDay()] + " " + ele["Date"]} || ${ele["Route"] + " " + ele["Route_Name"]} ||  ${ele["Time_Start"] + "-" + ele["Time_End"]} ||  ${String(Math.floor(durationInMinutes / 60)) + ":" + String(durationInMinutes % 60)} || (${ele["Shift_ID"]})</label><br>`;                                                                                                                                                             
+                toReturn += `<label for="${ele["_id"]}"><input type="checkbox" id="${ele["_id"]}" name="holesSelected" value="${ele["_id"]}">${daysOfWeek[date.getDay()] + " " + ele["Date"]} || ${ele["Route"] + " " + ele["Route_Name"]} ||  ${ele["Time_Start"] + "-" + ele["Time_End"]} ||  ${String(Math.floor(durationInMinutes / 60)) + ":" + String(durationInMinutes % 60)} || (${ele["Shift_ID"]})</label><br>`;                                                                                                                                                             
             }
         }
 
