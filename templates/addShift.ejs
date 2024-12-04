@@ -33,7 +33,7 @@
 </html>
 
 <script>
-	let myPort = "<%- port %>";
-	document.querySelector("#appForm").action = "http://localhost:" + myPort + "/processAddShift";
-	document.querySelector("#homeLink").href = "http://localhost:" + myPort + "/";
+	const baseURL = window.location.origin;
+	document.querySelector("#appForm").action = baseURL + "/processAddShift";
+	document.querySelector("#homeLink").href = baseURL + "/";
 </script>

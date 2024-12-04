@@ -19,6 +19,6 @@
 </html>
 
 <script>
-	let myPort = "<%- port %>";
-	document.querySelector("#homeLink").href = "http://localhost:" + myPort + "/";
+	const baseURL = window.location.origin;
+	document.querySelector("#homeLink").href = baseURL + "/";
 </script>

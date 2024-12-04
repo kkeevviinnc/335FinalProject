@@ -30,7 +30,7 @@
 </html>
 
 <script>
-	let myPort = "<%- port %>";
-	document.querySelector("#appForm").action = "http://localhost:" + myPort + "/processAddDriver";
-	document.querySelector("#homeLink").href = "http://localhost:" + myPort + "/";
+	const baseURL = window.location.origin;
+	document.querySelector("#appForm").action = baseURL + "/processAddDriver";
+	document.querySelector("#homeLink").href = baseURL + "/";
 </script>
