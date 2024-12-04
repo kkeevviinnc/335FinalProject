@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8" />
+	<title>Add Driver to Subleave</title>
+</head>
+
+<body>
+	<h1>Add Driver to Subleave</h1>
+	<form id="appForm" method="post">
+		<fieldset>
+			<label><strong>Name:</strong> <input type="text" name="name" required></label><br><br>
+			<label><strong>Driver Number:</strong> <input type="text" name="number" pattern="^[A-Z][0-9]{2}$" size="3" required></label><br><br>
+			<label><strong>Email:</strong> <input type="email" name="email" required></label> <br><br>
+			<strong>Dispatch Trained?:</strong><br>
+			<label><input type="radio" name="dispatch" value="true"> Yes </label><br>
+			<label><input type="radio" name="dispatch" value="false" checked> No </label><br>
+		</fieldset>
+		<br>
+		<input type="reset" />
+		<input type="submit" value="Add Driver"/>
+	</form>
+</body>
+
+
+<hr>
+<a id="homeLink">HOME</a>
+
+</html>
+
+<script>
+	let myPort = "<%- port %>";
+	document.querySelector("#appForm").action = "http://localhost:" + myPort + "/processAddDriver";
+	document.querySelector("#homeLink").href = "http://localhost:" + myPort + "/";
+</script>

@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8" />
+	<title>Available Subsheet Shifts</title>
+</head>
+
+<body>
+	<h1>Shifts Available to be Picked Up</h1>
+	<div><%- myTable %></div>
+</body>
+
+
+<hr>
+<a id="homeLink">HOME</a>
+
+</html>
+
+<script>
+	let myPort = "<%- port %>";
+	document.querySelector("#homeLink").href = "http://localhost:" + myPort + "/";
+</script>

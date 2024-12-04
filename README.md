@@ -1,5 +1,9 @@
 # 335FinalProject
-This project will be a reworking of Shuttle-UM's Subleave, which allows driving staff to request leave from shifts and pick up subleave shifts.
+Authors: Kevin Cheng & Jon Rossi
+
+This project will be a reworking of Shuttle-UM's Subleave, which allows driving staff to request leave from shifts and pick up subleave shifts. 
+
+For CMSC335, this application will be implemented in a limited functionality as described below.
 
 
 # CMSC335 Final Project Functionality
@@ -7,18 +11,18 @@ This project will be a reworking of Shuttle-UM's Subleave, which allows driving 
     - DrivingShifts: A collection should store all available shifts (driving and dispatch)
         * Example Shifts:
         
-        {"Date": "12/02/2024", "Shift-ID" : "12-02-24-77", "Route" : "STY", "Package": "FT-43", "Time_Start": "19:45", "Time_End": "20:50", "Start_Location": "Base", "End_Location": "Base", "Driver": null}
+        {"Date": "12/02/2024", "Shift_ID" : "12-02-24-77", "Route" : "STY", "Route_Name" : "Standby", "Package": "FT-43", "Time_Start": "19:45", "Time_End": "20:50", "Start_Location": "Base", "End_Location": "Base", "Driver": null}
 
-        {"Date": "12/06/2024", "Shift-ID" : "12-06-24-306", "Route" : "105-5", "Package": "SF-06", "Time_Start": "10:58", "Time_End": "12:48", "Start_Location": "Regents", "End_Location": "Regents", "Driver": "Z02"}
+        {"Date": "12/06/2024", "Shift_ID" : "12-06-24-306", "Route" : "105-5", "Route_Name" : "Campus Connector-5", "Package": "SF-06", "Time_Start": "10:58", "Time_End": "12:48", "Start_Location": "Regents", "End_Location": "Regents", "Driver": "Z02"}
 
-        {"Date": "12/02/2024", "Shift-ID" : "12-02-24-501", "Route" : "DSP-H", "Package": "DSP-H", "Time_Start": "16:30", "Time_End": "19:30", "Start_Location": "Base", "End_Location": "Base", "Driver": "D12"}
+        {"Date": "12/02/2024", "Shift_ID" : "12-02-24-501", "Route" : "DSP-H", "Route_Name" : "Dispatch H", "Package": "DSP-H", "Time_Start": "16:30", "Time_End": "19:30", "Start_Location": "Base", "End_Location": "Base", "Driver": "D12"}
 
-        {"Date": "12/02/2024", "Shift-ID" : "12-02-24-412", "Route" : "DR-3B", "Package": "PB-12", "Time_Start": "13:30", "Time_End": "17:30", "Start_Location": "Base", "End_Location": "Base", "Driver": "P24"}
+        {"Date": "12/02/2024", "Shift_ID" : "12-02-24-412", "Route" : "DR-3B", "Route_Name" : "Demand Response 3B", "Package": "PB-12", "Time_Start": "13:30", "Time_End": "17:30", "Start_Location": "Base", "End_Location": "Base", "Driver": "P24"}
       
 
     - Drivers: A collection to store all drivers and their information:
 
-       {"Name" : "Kevin Cheng", "Driver_Number" : "Z02", "email" : "myEmail@gmail.com"}
+       {"Name" : "Kevin Cheng", "Driver_Number" : "Z02", "Email" : "myEmail@gmail.com", "Dispatch-Trained" : true}
 
 1. Form 2: Drivers should be able to fill out a form to select available shifts.
     - The form should allow all driving staff to select available driving shifts. (Shifts in DrivingShifts with Driver set to null)

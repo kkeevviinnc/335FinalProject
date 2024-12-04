@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8" />
+	<title>Request Submission</title>
+</head>
+
+<body>
+	<h1>Request Submitted</h1>
+	<div>
+		
+		You will receive an email confirmation soon. Please let your manager know if you have any questions.
+		
+	</div>
+	<hr>
+	<strong>Task completed on <span id="dateTime"></span></strong>
+	<hr>
+</body>
+
+<a id="homeLink">HOME</a>
+
+</html>
+
+<script>
+	let myPort = "<%- port %>";
+	document.querySelector("#homeLink").href = "http://localhost:" + myPort + "/";
+	document.querySelector("#dateTime").innerHTML = (new Date()).toLocaleString('en-US',{timeZone: 'America/New_York'});
+</script>

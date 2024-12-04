@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8" />
+	<title>Add <%- item %> Request Result</title>
+</head>
+
+<body>
+	<h1>Add <%- item %> Request Result:</h1>
+	<div>
+	<p> <%- result %> </p>
+		
+	</div>
+</body>
+<br>
+<a id="homeLink">HOME</a>
+
+</html>
+
+<script>
+	let myPort = "<%- port %>";
+	document.querySelector("#homeLink").href = "http://localhost:" + myPort + "/";
+</script>

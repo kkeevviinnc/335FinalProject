@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8" />
+	<title>Add Shift to Subleave</title>
+</head>
+
+<body>
+	<h1>Add Shift to Subleave</h1>
+	<form id="appForm" method="post">
+		<fieldset>
+			<label><strong>Date:</strong> <input type="date" id="dateInput" name="date" required/></label>
+			<label><strong>Last Digits of Shift ID:</strong> <input type="number" name="shiftID" min="0" step="1" required></label><br><br>
+			<label><strong>Package:</strong> <input type="text" name="package" required></label> <br><br>
+			<label><strong>Route:</strong> <input type="text" name="route" required></label> <br><br>
+			<label><strong>Route Name:</strong> <input type="text" name="route_name" required width="80px"></label> <br><br>
+			<label><strong>Start Time:</strong> <input type="time" name="start_time" required></label> <br><br>
+			<label><strong>End Time:</strong> <input type="time" name="end_time" required></label> <br><br>
+			<label><strong>Start Location:</strong> <input type="text" name="start_location" value="Base" required></label> <br><br>
+			<label><strong>End Location:</strong> <input type="text" name="end_location" value="Base" required></label> <br><br>
+		</fieldset>
+		<br>
+		<input type="reset" />
+		<input type="submit" value="Add Shift"/>
+	</form>
+</body>
+
+
+<hr>
+<a id="homeLink">HOME</a>
+
+</html>
+
+<script>
+	let myPort = "<%- port %>";
+	document.querySelector("#appForm").action = "http://localhost:" + myPort + "/processAddShift";
+	document.querySelector("#homeLink").href = "http://localhost:" + myPort + "/";
+</script>
