@@ -1,5 +1,11 @@
 # 335FinalProject
-Authors: Kevin Cheng & Jon Rossi
+
+**Submitted by:** *Name (directory id)*
+**Group Members:** Kevin Cheng (kcheng14), Jon Rossi (*directory id*)
+**App Description:** Allow Shuttle-UM drivers to sign up for vacant shifts.
+**YouTube Video Link:** *Insert Link Here*
+**APIs:** Nodemailer (https://www.nodemailer.com/),
+**Contact Email:**  kcheng14@umd.edu
 
 This project will be a reworking of Shuttle-UM's Subleave, which allows driving staff to request leave from shifts and pick up subleave shifts. 
 
