@@ -3,7 +3,11 @@ const app = express();
 const path = require("path");
 const bodyParser = require("body-parser");
 const nodemailer = require("nodemailer");
-require("dotenv").config({ path: path.resolve(__dirname, 'credentialsDontPost/.env') });
+
+//Only configure this if running locally
+if (process.env.NODE_ENV !== 'production') {
+    require("dotenv").config({ path: path.resolve(__dirname, 'credentialsDontPost/.env') });
+}
 
 const user = process.env.MONGO_DB_USERNAME;
 const pass = process.env.MONGO_DB_PASSWORD;
@@ -56,7 +60,7 @@ app.get("/subsheetShifts", async (req,res) => {
            }
         }
 
-        res.render("shiftsTable", {port: portNumber, myTable: toReturn + "</table>"});
+        res.render("shiftsTable", {myTable: toReturn + "</table>"});
     } catch (e) {
         console.error(e);
     } finally {
@@ -94,7 +98,7 @@ app.get("/subsheetForm", async (req,res) => {
             toReturnDrivers += `<option value="${ele["Driver_Number"]}">${ele["Driver_Number"] + " " + ele["Name"]}</option>`;
         }
 
-        res.render("subsheetForm", {port: portNumber, checkboxFields: toReturn, driverSelection: toReturnDrivers});
+        res.render("subsheetForm", {checkboxFields: toReturn, driverSelection: toReturnDrivers});
     } catch (e) {
         console.error(e);
     } finally {
@@ -114,7 +118,6 @@ app.post("/processSubsheetForm", async (req, res) => {
     let myDocument = {
         driver: req.body["driverSelected"].trim(),
         selections: inputSelections.map((ele)=>ele.trim()),
-        port: portNumber
     }
 
     try {
@@ -177,7 +180,7 @@ app.post("/processSubsheetForm", async (req, res) => {
 });
 
 app.get("/addDriver", (req,res) => {
-    res.render("addDriver", {port: portNumber})
+    res.render("addDriver")
 });
 
 app.post("/processAddDriver", async (req,res) => {
@@ -216,11 +219,11 @@ app.post("/processAddDriver", async (req,res) => {
         await client.close();
     }
 
-    res.render("singleAddedConfirmation", {item: "Driver", port: portNumber, result: (acknowledged?"SUCCESS":"FAILURE")});
+    res.render("singleAddedConfirmation", {item: "Driver", result: (acknowledged?"SUCCESS":"FAILURE")});
 });
 
 app.get("/addShift", (req,res) => {
-    res.render("addShift", {port: portNumber})
+    res.render("addShift")
 });
 
 app.post("/processAddShift", async (req,res) => {
@@ -259,7 +262,7 @@ app.post("/processAddShift", async (req,res) => {
         await client.close();
     }
 
-    res.render("singleAddedConfirmation", {item: "Shift", port: portNumber, result: (acknowledged?"SUCCESS":"FAILURE")});
+    res.render("singleAddedConfirmation", {item: "Shift", result: (acknowledged?"SUCCESS":"FAILURE")});
 });
 
 
