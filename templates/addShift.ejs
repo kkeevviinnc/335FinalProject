@@ -7,7 +7,8 @@
 </head>
 
 <body>
-	<h1>Add Shift to Subleave</h1>
+	
+	<h1><a id="homeLink"><img src="UMDGlobe.gif" type="image/png"></a>Add Shift to Subleave</h1>
 	<form id="appForm" method="post">
 		<fieldset>
 			<label><strong>Date:</strong> <input type="date" id="dateInput" name="date" required/></label>
@@ -28,7 +29,7 @@
 
 
 <hr>
-<a id="homeLink">HOME</a>
+
 
 </html>
 
@@ -37,3 +38,19 @@
 	document.querySelector("#appForm").action = baseURL + "/processAddShift";
 	document.querySelector("#homeLink").href = baseURL + "/";
 </script>
+
+
+<style>
+	body {
+		background-color: whitesmoke;
+		color: rgb(88, 88, 88);
+		text-align: center;
+	}
+	h1   {
+		color: rgb(255, 0, 0);
+	}
+	img {
+		width: 100px;
+    	vertical-align: middle;
+	}
+</style>
