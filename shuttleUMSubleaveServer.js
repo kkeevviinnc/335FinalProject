@@ -35,6 +35,7 @@ const daysOfWeek = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Fri
 
 app.set("view engine", "ejs");
 app.set("views", path.resolve(__dirname, "templates"));
+app.use(express.static('templates'));
 
 app.get("/", (req,res) => {
     res.render("index");
