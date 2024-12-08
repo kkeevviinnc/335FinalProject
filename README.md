@@ -2,7 +2,7 @@
 
 **Submitted by:** *Name (directory id)*
 
-**Group Members:** Kevin Cheng (kcheng14), Jon Rossi (*directory id*)
+**Group Members:** Kevin Cheng (kcheng14), Jon Rossi (jrossi2)
 
 **App Description:** Allow Shuttle-UM drivers to sign up for vacant shifts.
 
