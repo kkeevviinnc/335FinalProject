@@ -1,12 +1,12 @@
 # 335FinalProject
 
-**Submitted by:** *Name (directory id)*
+**Submitted by:** Kevin Cheng (kcheng14)
 
 **Group Members:** Kevin Cheng (kcheng14), Jon Rossi (jrossi2)
 
 **App Description:** This app allows Shuttle-UM drivers to view and sign up for vacant shifts. When drivers sign up for a vacant shift, they will receive a confirmation email to their corresponding email in the database. In the back end, an administrator (Shuttle-UM Managers) can add drivers and shifts to the database.
 
-**YouTube Video Link:** *Insert Link Here*
+**YouTube Video Link:** https://youtu.be/vgQN7XNLEpY
 
 **APIs:** Nodemailer (https://www.nodemailer.com/)
 
@@ -38,16 +38,15 @@ The project is hosted on https://three35finalproject-ombp.onrender.com/
 
 1. Form 2: Drivers should be able to fill out a form to select available shifts.
     - The form should allow all driving staff to select available driving shifts. (Shifts in DrivingShifts with Driver set to null)
-    - The form should only allow ** dispatch-trained ** staff to select dispatching shifts.
 
 2. Form 2 Processing:
-    - DrivingShifts will be updated accordingly. A confirmation email will be sent to the driver.
+    - DrivingShifts will be updated accordingly. A confirmation email will be sent to the driver to the email that is on file.
 
 3. Form 3: Add Driver to Drivers Collection
 4. Form 5: Add Shifts to Shifts Collection
 
 
-# Full Functionality (IGNORE THIS FOR NOW! :P)
+# Wider Functionality (Phase 2)
 1. Authentication: Drivers should have to authenticate themselves to use the form
 2. Data Storage using MongoDB
     - DrivingShifts: A collection should store all available shifts (driving and dispatch)
