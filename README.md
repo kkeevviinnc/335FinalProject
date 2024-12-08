@@ -4,7 +4,7 @@
 
 **Group Members:** Kevin Cheng (kcheng14), Jon Rossi (jrossi2)
 
-**App Description:** Allow Shuttle-UM drivers to sign up for vacant shifts.
+**App Description:** This app allows Shuttle-UM drivers to view and sign up for vacant shifts. When drivers sign up for a vacant shift, they will receive a confirmation email to their corresponding email in the database. In the back end, an administrator (Shuttle-UM Managers) can add drivers and shifts to the database.
 
 **YouTube Video Link:** *Insert Link Here*
 
