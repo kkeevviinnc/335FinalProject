@@ -9,7 +9,10 @@
 <body>
 	<h1><a id="homeLink"><img src="/UMDGlobe.gif" type="image/png"></a>Shifts Available to be Picked Up</h1>
 	<div><%- myTable %></div>
+<hr>
 </body>
+Click on the UMD globe to go home.
+Click <a id="signupLink">here to sign up for a shift</a>.
 
 
 <hr>
@@ -20,6 +23,7 @@
 <script>
 	const baseURL = window.location.origin;
 	document.querySelector("#homeLink").href = baseURL + "/";
+	document.querySelector("#signupLink").href = baseURL + "/subsheetForm";
 </script>
 
 <style>
