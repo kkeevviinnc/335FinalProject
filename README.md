@@ -1,6 +1,6 @@
 # 335FinalProject
 
-**Submitted by:** Kevin Cheng (kcheng14)
+**Submitted by:** Kevin Cheng (directory id: kcheng14)
 
 **Group Members:** Kevin Cheng (kcheng14), Jon Rossi (jrossi2)
 
