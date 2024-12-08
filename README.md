@@ -12,11 +12,13 @@
 
 **Contact Email:**  kcheng14@umd.edu
 
+**Github Repo:**  https://github.com/kkeevviinnc/335FinalProject/
+
+**Deployed To:** https://three35finalproject-ombp.onrender.com/
+
 This project will be a reworking of Shuttle-UM's Subleave, which allows driving staff to request leave from shifts and pick up subleave shifts. 
 
-For CMSC335, this application will be implemented in a limited functionality as described below.
-The project is hosted on https://three35finalproject-ombp.onrender.com/
-
+For CMSC335, this application will be implemented with limited functionality as described below.
 
 # CMSC335 Final Project Functionality
 1. Data Storage using MongoDB
